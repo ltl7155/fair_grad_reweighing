@@ -13,8 +13,8 @@ from model import  NetRaw as Net
 from model import  count_parameters , freezen_gate 
 
 
-from utils_van import   evaluate_eo_eop
-from utils_van_prune import train_eo
+from utils_eval import   evaluate_eo
+from utils_train import train_eo
 
 
 
@@ -129,9 +129,9 @@ def run_experiments(method='mixup', mode='dp', lam=0.5, lam2=0.5, exp=5, args=No
 
 #         # print("gates_to_params", gates_to_params )
 #         if args.pruning:
-#             group_wd_optimizer = group_lasso_decay(parameters_for_update, group_lasso_weight=args.group_wd_coeff,
-                                                   named_parameters=parameters_for_update_named,
-                                                   output_sizes=output_sizes)
+# #             group_wd_optimizer = group_lasso_decay(parameters_for_update, group_lasso_weight=args.group_wd_coeff,
+#                                                    named_parameters=parameters_for_update_named,
+#                                                    output_sizes=output_sizes)
 
 
     
