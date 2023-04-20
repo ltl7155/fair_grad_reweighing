@@ -89,6 +89,7 @@ def train_eo(writer, epochs, model, criterion, optimizer, X_train, A_train, y_tr
 #             weight01 = output_mean[1].pow(3)
 #             weight10 = (1-output_mean[2]).pow(3)
 #             weight11 = output_mean[3].pow(3)
+#           The loss item is identical to the item design in the paper and can reduce the calculation.
             for k, (g0, g1) in enumerate(zip(grads[0], grads[2])):
                 if k >= args.sl:
                     # print("v1:", (1-output_mean[2]))
