@@ -27,6 +27,9 @@ from torch.utils.tensorboard import SummaryWriter
 
 device=  torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+evaluate_eo_eop = evaluate_eo
+evaluate_eo_eop_post = evaluate_eo
+
 def run_experiments(method='mixup', mode='dp', lam=0.5, lam2=0.5, exp=5, args=None):
     '''
     Retrain each model for 10 times and report the mean ap and dp.
